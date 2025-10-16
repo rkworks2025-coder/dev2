@@ -588,7 +588,7 @@ const Junkai = (()=>{
         row.className = `row ${rowBg(rec)}`;
       });
       const btn = document.createElement('button');
-      btn.className = 'btn tiny';
+      btn.className = 'btn tiny inspect';
       btn.textContent = '点検';
       btn.addEventListener('click', () => {
         const q = new URLSearchParams({
@@ -599,14 +599,14 @@ const Junkai = (()=>{
         location.href = `${TIRE_APP_URL}?${q.toString()}`;
       });
       
-      // ▼ v9b追加：Lostボタン（UIのみ、機能未実装）
+      // ▼ v9c：Lostボタン（UIのみ・右カラム最上段）
       const lostBtn = document.createElement('button');
       lostBtn.className = 'btn tiny lost';
       lostBtn.textContent = 'Lost';
       right.appendChild(lostBtn);
 right.appendChild(sel);
       right.appendChild(btn);
-row.appendChild(left);
+      row.appendChild(left);
       row.appendChild(mid);
       row.appendChild(right);
       list.appendChild(row);

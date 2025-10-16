@@ -81,9 +81,21 @@ html,body{margin:0;padding:0;background:#f6f7fb;color:var(--fg);font-family:-app
   white-space:normal;
 }
 
-/* v9a Lostボタンの縦積み用の余白 */
-.rightcol .btn + .btn { margin-top: 6px; }
+/* ===== v9c: right column compact & fixed widths ===== */
+.rightcol > * + * { margin-top: 4px; }                     /* ボタン同士の間隔を半分に */
+.rightcol .btn.lost, .rightcol .state {                    /* Lost と 通常を同じ幅/高さに */
+  width: 72px;
+  height: 28px;
+  font-size: 12px;
+  padding: 0;
+  text-align: center;
+}
+.rightcol .btn.inspect {                                   /* 点検はやや大きめ */
+  width: 88px;
+  height: 34px;
+  font-size: 13px;
+  padding: 0;
+  text-align: center;
+}
+.rightcol .state option { text-align: center; }            /* 保険（未対応環境でも無害） */
 
-.rightcol > * + * { margin-top: 2px; }
-
-.rightcol .btn.lost { padding: 6px 10px; font-size: 12px; }
