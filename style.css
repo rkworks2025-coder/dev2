@@ -81,12 +81,30 @@ html,body{margin:0;padding:0;background:#f6f7fb;color:var(--fg);font-family:-app
   white-space:normal;
 }
 
-/* ===== v9d: unified button widths and tighter gaps ===== */
-.rightcol > * + * { margin-top: 2px; }                     /* ボタン間隔さらに半分 */
-.rightcol .btn.lost, .rightcol .state, .rightcol .btn.inspect {
-  width: 48px;                                             /* 横幅を3つで統一 */
+/* ===== v9e: Safari-stable fixed sizing for right column ===== */
+.rightcol > * + * { margin-top: 2px !important; } /* narrow gaps */
+
+.rightcol .btn {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 48px !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  font-size: 12px !important;
+  padding: 0 !important;
+  text-align: center;
+  white-space: nowrap;
+  word-break: keep-all;
+  -webkit-text-size-adjust: none;
 }
-/* 既存の高さは維持（.lost/.state 28px, .inspect 34px などがある場合そのまま） */
-.rightcol .btn { text-align: center; }
-.rightcol .state { padding: 0; text-align: center; }
+
+.rightcol .state {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 48px !important;
+  height: 28px !important;
+  font-size: 12px !important;
+  padding: 0 !important;
+  text-align: center;
+}
 

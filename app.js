@@ -590,7 +590,6 @@ const Junkai = (()=>{
       const btn = document.createElement('button');
       btn.className = 'btn tiny';
       btn.textContent = '点検';
-        btn.classList.add('inspect');
       btn.addEventListener('click', () => {
         const q = new URLSearchParams({
           station: rec.station || '',
@@ -600,7 +599,7 @@ const Junkai = (()=>{
         location.href = `${TIRE_APP_URL}?${q.toString()}`;
       });
       
-      // ▼ v9d：Lostボタン（UIのみ・右カラム最上段）
+      // ▼ v9e：Lostボタン（UIのみ・右カラム最上段）
       const lostBtn = document.createElement('button');
       lostBtn.className = 'btn tiny lost';
       lostBtn.textContent = 'Lost';
