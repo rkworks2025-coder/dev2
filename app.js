@@ -598,15 +598,15 @@ const Junkai = (()=>{
         });
         location.href = `${TIRE_APP_URL}?${q.toString()}`;
       });
-      right.appendChild(sel);
-      right.appendChild(btn);
-      // ▼ v9a追加：Lostボタン（UIのみ、機能未実装）
+      
+      // ▼ v9b追加：Lostボタン（UIのみ、機能未実装）
       const lostBtn = document.createElement('button');
-      lostBtn.className = 'btn tiny';
+      lostBtn.className = 'btn tiny lost';
       lostBtn.textContent = 'Lost';
       right.appendChild(lostBtn);
-
-      row.appendChild(left);
+right.appendChild(sel);
+      right.appendChild(btn);
+row.appendChild(left);
       row.appendChild(mid);
       row.appendChild(right);
       list.appendChild(row);
