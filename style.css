@@ -81,8 +81,8 @@ html,body{margin:0;padding:0;background:#f6f7fb;color:var(--fg);font-family:-app
   white-space:normal;
 }
 
-/* ===== v9e: Safari-stable fixed sizing for right column ===== */
-.rightcol > * + * { margin-top: 2px !important; } /* narrow gaps */
+/* ===== v9f: right column fixed sizing (Safari-safe) ===== */
+.rightcol > * + * { margin-top: 2px !important; }
 
 .rightcol .btn {
   -webkit-appearance: none;
@@ -103,7 +103,7 @@ html,body{margin:0;padding:0;background:#f6f7fb;color:var(--fg);font-family:-app
   appearance: none;
   width: 48px !important;
   height: 28px !important;
-  font-size: 12px !important;
+  font-size: 12px !important;   /* リュウの指定：通常=12px */
   padding: 0 !important;
   text-align: center;
 }

@@ -599,7 +599,7 @@ const Junkai = (()=>{
         location.href = `${TIRE_APP_URL}?${q.toString()}`;
       });
       
-      // ▼ v9e：Lostボタン（UIのみ・右カラム最上段）
+      // ▼ v9f：Lostボタン（UIのみ・右カラム最上段）
       const lostBtn = document.createElement('button');
       lostBtn.className = 'btn tiny lost';
       lostBtn.textContent = 'Lost';
